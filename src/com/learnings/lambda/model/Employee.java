@@ -1,11 +1,12 @@
 package com.learnings.lambda.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 public class Employee {
 
     private int id;
-
     private String name;
-
     private String panCard;
 
     public Employee(int i, String s, String s1) {
