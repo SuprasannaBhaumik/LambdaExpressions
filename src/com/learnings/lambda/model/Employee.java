@@ -1,18 +1,15 @@
 package com.learnings.lambda.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 public class Employee {
 
     private int id;
     private String name;
     private String panCard;
 
-    public Employee(int i, String s, String s1) {
-        this.id = i;
-        this.name = s;
-        this.panCard = s1;
+    public Employee(int id, String name, String panCard) {
+        this.id = id;
+        this.name = name;
+        this.panCard = panCard;
     }
 
     public int getId() {
@@ -37,5 +34,14 @@ public class Employee {
 
     public void setPanCard(String panCard) {
         this.panCard = panCard;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", panCard='" + panCard + '\'' +
+                '}';
     }
 }

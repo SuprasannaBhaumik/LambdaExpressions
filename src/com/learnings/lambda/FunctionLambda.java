@@ -23,7 +23,7 @@ public class FunctionLambda {
         List<Employee> employeeList = createUsers(10);
 
         //show pan number
-        Function<Employee, String> panCardMapper = (Employee e) -> e.getPanCard();
+        Function<Employee, String> panCardMapper = Employee::getPanCard;
 
         List<String> panCards = new ArrayList<>();
 

@@ -7,7 +7,7 @@ public class ChainingLambda {
 
     public static void main(String[] args) {
 
-        //isNull
+        //isNull: returns boolean, takes an single input
         Predicate<String> isNull = s -> s == null;
 
         //isEmpty
@@ -23,7 +23,7 @@ public class ChainingLambda {
 
         System.out.println("------------------------------------------");
 
-        //chain consumers
+        //chain consumers, takes input, returns nothing
         Consumer<Integer> c1 = i -> System.out.println(i);
         Consumer<Integer> c2 = i -> System.out.println(i);
         Consumer<Integer> c3 = c1.andThen(c2);

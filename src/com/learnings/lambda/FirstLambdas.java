@@ -9,7 +9,7 @@ public class FirstLambdas {
 
     public static void main(String[] args) {
 
-        //Supplier example
+        //Supplier example, takes nothing returns object
         Supplier<String> supplier = () -> {
             System.out.println("inside the supplier!");
             return "Hello Suprasanna!!!";
@@ -19,7 +19,7 @@ public class FirstLambdas {
 
         System.out.println("----------------------------");
 
-        //Consumer example
+        //Consumer example, takes input returns nothing
         Consumer<String> consumer = (String s) -> {
             System.out.println("I am inside the consumer");
             System.out.println(s);
@@ -28,7 +28,7 @@ public class FirstLambdas {
 
         System.out.println("----------------------------");
 
-        //Predicate example
+        //Predicate example, takes input returns boolean
         Predicate<Integer> predicate = (Integer i) -> {
             System.out.println("I am inside the predicate that returns boolean, used for filter operations");
             return i > 0;
@@ -38,7 +38,7 @@ public class FirstLambdas {
 
         System.out.println("----------------------------");
 
-        //Function example
+        //Function example, takes something returns something
         Function<Integer, String> function = (Integer x) -> {
             System.out.println("I am inside the function that takes some input, performs operations and returns output, used for map operations");
             return x.toString();

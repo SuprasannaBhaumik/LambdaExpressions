@@ -25,10 +25,14 @@ public class ComparatorLambda {
 
 
         //sort movies based on their length
-        Comparator<Movies> nameComparator = (m1, m2) -> Integer.compare(m1.getName().length(), m2.getName().length());
+        //Comparator<Movies> nameComparator = (m1, m2) -> Integer.compare(m1.getName().length(), m2.getName().length());
+        //comparing int takes Movies, returns Integer
+        //for now achieving better optimization specific method is used
+        Comparator<Movies> nameComparator = Comparator.comparingInt(m -> m.getName().length());
 
         //sort movies based on their year
-        Comparator<Movies> yearComparator = (m1, m2) -> Integer.compare(m1.getYear(), m2.getYear());
+        //Comparator<Movies> yearComparator = (m1, m2) -> Integer.compare(m1.getYear(), m2.getYear());
+        Comparator<Movies> yearComparator = Comparator.comparingInt(Movies::getYear);
 
         //compare based on year
         movies.sort(yearComparator);
